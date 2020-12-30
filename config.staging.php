@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'baseUrl' => 'https://objective-allen-38c276.netlify.com',
+    'baseUrl' => 'https://objective-allen-38c276.netlify.app',
     'production' => false,
 ];
