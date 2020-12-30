@@ -1,0 +1,42 @@
+backend:
+  name: git-gateway
+  branch: content
+  repo: jordonbaade/lawbcdemo
+publish_mode: editorial_workflow
+media_folder: "source/assets/images/uploads"
+public_folder: "/assets/images/uploads"
+collections:
+  - name: posts
+    label: Posts
+    label_singular: 'Post'
+    folder: source/_posts
+    create: true
+    slug: '{{slug}}-{{year}}-{{month}}-{{day}}'
+    fields:
+      - label: Extends
+        name: extends
+        widget: hidden
+        default: _layouts.post
+      - label: Section
+        name: section
+        widget: hidden
+        default: content
+      - label: Title
+        name: title
+        widget: string
+      - label: Cover Image
+        name: cover_image
+        widget: image
+        required: false
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Description
+        name: description
+        widget: text
+      - label: Category
+        name: category
+        widget: string
+      - label: Body
+        name: body
+        widget: markdown
